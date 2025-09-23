@@ -1,25 +1,27 @@
 #include <stdio.h>
+#include <string.h>
 #include "copy.h"
 
-char line[MAXLINE];
-CHAR LONGEST[MAXLINE];
+char line[MAXLINE]; // 입력 줄
+char longest[MAXLINE]; // 가장 긴 줄
+/* 입력 줄 가운데 가장 긴 줄을 프린트한다. */
 
-main() {
-	int len;
-	int max;
-	max = 0;
-	
-	while(gets(line) != NULL) {
-		len = strlen(line);
+int main() {
+    int len;
+    int max;
+    max = 0;
 
-		if (len > max) {
-			max = len;
-			copy(line, longest);
-		}
-	}
+    while (gets(line) != NULL) {
+        len = strlen(line);
 
-	if (max > 0)
-		printf("%s \n", longest);
+        if (len > max) {
+            max = len;
+            copy(line, longest);
+        }
+    }
 
-	return 0;
+    if (max > 0)
+        printf("%s \n", longest);
+
+    return 0;
 }
