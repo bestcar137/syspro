@@ -15,7 +15,7 @@ int main(int argc, char *argv[]) {
     }
     fp = fopen(argv[1], "r");
     printf("%-9s %-7s %-4s\n", "StudentID", "Name", "Score");
-    while (fscanf(fp, "%d %s %d", &rec.id, rec.name, &rec.score) == 3)
+    while (fscanf(fp, "%d %s %hd", &rec.id, rec.name, &rec.score) == 3)
         printf("%10d %6s %6d\n", rec.id, rec.name, rec.score);
     fclose(fp);
     return 0;
