@@ -72,6 +72,8 @@ int main(int argc, char *argv[]) {
         return 0;
     }
 
+
+    /** -n 옵션 고려하지 않았을 때 코드. gpt X */
     if (argc < 2) {
         fp = stdin;
         while ((c = getc(fp)) != EOF) putc(c, stdout);
