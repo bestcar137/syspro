@@ -5,7 +5,7 @@
 #include <stdio.h>
 #include "../prob04/student.h"
 
-/* 텍스트 파일에서 학생 정보를 읽어 프린트한다. */
+/// 텍스트 파일에서 학생 정보를 읽어 프린트한다.
 int main(int argc, char *argv[]) {
     struct student rec;
     FILE *fp;
