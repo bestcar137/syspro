@@ -16,7 +16,7 @@ int main() {
 
     max = 0;
 
-    while (gets(line) != NULL) {
+    while (fgets(line, MAXLINE, stdin) != NULL) {
         len = strlen(line);
 
         if (len > max) {
