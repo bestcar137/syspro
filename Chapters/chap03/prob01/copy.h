@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 9. 30..
+// Created by bestc on 26. 9. 16..
 //
 
 #ifndef SYSPRO_COPY_H

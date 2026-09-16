@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 9. 30..
+// Created by bestc on 26. 9. 16..
 //
 
 #include <stdio.h>
@@ -13,6 +13,7 @@ char longest[MAXLINE]; // 가장 긴 줄
 int main() {
     int len;
     int max;
+
     max = 0;
 
     while (gets(line) != NULL) {

@@ -11,6 +11,8 @@ set(CMAKE_C_STANDARD 11)
 add_executable(chap03_hw01
         Chapters/chap03/hw01/main.c
         Chapters/chap03/hw01/copy.c
+        Chapters/chap03/prob01/copy.c
+        Chapters/chap03/prob01/copy.c
 )
 
 # prob01 실행 파일

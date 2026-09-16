@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 9. 30..
+// Created by bestc on 26. 9. 16..
 //
 
 #include <stdio.h>
@@ -8,7 +8,9 @@
 
 void copy(char from[], char to[]) {
     int i;
+
+
     i = 0;
-    while((to [i] = from[i]) != '\0')
+    while ((to[i] = from[i]) != '\0')
         ++i;
 }
