@@ -3,20 +3,22 @@
 //
 
 #include <stdio.h>
-/* íŒŒì¼ ë³µì‚¬ í”„ë¡œê·¸ë¨ */
+/* ÆÄÀÏ º¹»ç ÇÁ·Î±×·¥ */
 
 int main(int argc, char *argv[]) {
     char c;
     FILE *fp1, *fp2;
 
     if (argc != 3) {
-        fprintf(stderr, "How to use: %s File1 File2\n", argv[0]);
+        fprintf(stderr, "»ç¿ë¹ı: %s File1 File2\n", argv[0]);
         return 1;
     }
+
+
     fp1 = fopen(argv[1], "r");
 
     if (fp1 == NULL) {
-        fprintf(stderr, "File %s Open Error\n", argv[1]);
+        fprintf(stderr, "ÆÄÀÏ %s ¿­±â ¿À·ù\n", argv[1]);
         return 2;
     }
     fp2 = fopen(argv[2], "w");

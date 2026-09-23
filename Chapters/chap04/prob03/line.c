@@ -13,19 +13,19 @@ int main(int argc, char *argv[]) {
     char buffer[MAXLINE];
 
     if (argc != 2) {
-        fprintf(stderr, "How to use : line FileName\n");
+        fprintf(stderr, "사용법 : line 파일이름\n");
         exit(1);
     }
 
     if ((fp = fopen(argv[1], "r")) == NULL) {
-        fprintf(stderr, "Error Open File\n");
+        fprintf(stderr, "파일 열기 오류\n");
         exit(2);
     }
 
 
-    while (fgets(buffer, MAXLINE, fp) != NULL) {
+    while (fgets(buffer, MAXLINE, fp) != NULL) {    //한 줄 읽기
         line++;
         printf("%3d %s", line, buffer);
-        exit(0);
     }
+    exit(0);
 }

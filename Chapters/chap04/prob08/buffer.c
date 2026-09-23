@@ -13,11 +13,9 @@ int main(int argc, char *argv[]) {
 
     if (!strcmp(argv[1], "stdin")) {
         fp = stdin;
-        printf("Enter one letter:");
-        if (getchar() == EOF)  perror("getchar");
-    }
-
-    else if (!strcmp(argv[1], "stdout"))
+        printf("한 글자 입력:");
+        if (getchar() == EOF) perror("getchar");
+    } else if (!strcmp(argv[1], "stdout"))
         fp = stdout;
 
     else if (!strcmp(argv[1], "stderr"))
@@ -26,21 +24,20 @@ int main(int argc, char *argv[]) {
     else if ((fp = fopen(argv[1], "r")) == NULL) {
         perror("fopen");
         exit(1);
-
     } else if (getc(fp) == EOF) perror("getc");
 
-    printf("Stream = %s, ", argv[1]);
+    printf("스트림 = %s, ", argv[1]);
 
-    if (fp->_flags & _IO_UNBUFFERED)
-        printf("Unbuffered");
+    if (fp->_flag & _IO_UNBUFFERED)
+        printf("버퍼 미사용");
 
-    else if (fp->_flags & _IO_LINE_BUF)
-        printf("Line buffered");
+    else if (fp->_flag & _IO_LINE_BUF)
+        printf("줄 버퍼 미사용");
 
     else
-        printf("Fully buffered");
+        printf("완전 버퍼 사용");
 
 
-    printf(", Buffer size = %ld\n", fp->_IO_buf_end - fp->_IO_buf_base);
+    printf(", 버퍼 크기 = %d\n", fp->_IO_buf_end - fp->_IO_buf_base);
     exit(0);
 }

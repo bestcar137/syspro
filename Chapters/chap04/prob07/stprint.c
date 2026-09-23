@@ -5,27 +5,26 @@
 #include <stdio.h>
 
 #include "../prob04/student.h"
-// TODO: prob06ì—ì„œ ë§Œë“  í…ìŠ¤íŠ¸ íŒŒì¼ ì‚¬ìš©í•  ê²ƒ
+// TODO: prob06¿¡¼­ ¸¸µç ÅØ½ºÆ® ÆÄÀÏ »ç¿ëÇÒ °Í
 
 
-/* íŒŒì¼ì— ì €ìž¥ëœ ëª¨ë“  í•™ìƒ ì •ë³´ë¥¼ ì½ì–´ì„œ ì¶œë ¥í•œë‹¤. */
+/* ÆÄÀÏ¿¡ ÀúÀåµÈ ¸ðµç ÇÐ»ý Á¤º¸¸¦ ÀÐ¾î¼­ Ãâ·ÂÇÑ´Ù. */
 int main(int argc, char *argv[]) {
-
     struct student rec;
     FILE *fp;
     if (argc != 2) {
-        fprintf(stderr, "How to use: %s FileName\n", argv[0]);
+        fprintf(stderr, "»ç¿ë¹ý: %s ÆÄÀÏÀÌ¸§\n", argv[0]);
         return 1;
     }
 
     if ((fp = fopen(argv[1], "rb")) == NULL) {
-        fprintf(stderr, "Error Open File\n");
+        fprintf(stderr, "ÆÄÀÏ ¿­±â ¿À·ù\n");
         return 2;
     }
 
 
     printf("-----------------------------------\n");
-    printf("%10s %6s %6s\n", "StudentID", "Name", "Score");
+    printf("%10s %6s %6s\n", "ÇÐ¹ø", "ÀÌ¸§", "Á¡¼ö");
     printf("-----------------------------------\n");
 
     while (fread(&rec, sizeof(rec), 1, fp) > 0)
