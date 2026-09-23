@@ -1,6 +1,6 @@
 /** 프로그램 7.2는 rdlock.c으로 레코드에 대한 내용이라 교재의 프로그램 5.3: copy.c를 참고함
 //
-// Created by bestc on 25. 9. 30..
+// Created by bestc on 26. 9. 23..
 //
 
 * copy.c
