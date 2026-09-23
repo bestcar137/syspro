@@ -5,26 +5,26 @@
 #include <stdio.h>
 
 #include "../prob04/student.h"
-// TODO: prob06¿¡¼­ ¸¸µç ÅØ½ºÆ® ÆÄÀÏ »ç¿ëÇÒ °Í
+// TODO: prob06ì—ì„œ ë§Œë“  í…ìŠ¤íŠ¸ íŒŒì¼ ì‚¬ìš©í•  ê²ƒ
 
 
-/* ÆÄÀÏ¿¡ ÀúÀåµÈ ¸ðµç ÇÐ»ý Á¤º¸¸¦ ÀÐ¾î¼­ Ãâ·ÂÇÑ´Ù. */
+/* íŒŒì¼ì— ì €ìž¥ëœ ëª¨ë“  í•™ìƒ ì •ë³´ë¥¼ ì½ì–´ì„œ ì¶œë ¥í•œë‹¤. */
 int main(int argc, char *argv[]) {
     struct student rec;
     FILE *fp;
     if (argc != 2) {
-        fprintf(stderr, "»ç¿ë¹ý: %s ÆÄÀÏÀÌ¸§\n", argv[0]);
+        fprintf(stderr, "ì‚¬ìš©ë²•: %s íŒŒì¼ì´ë¦„\n", argv[0]);
         return 1;
     }
 
     if ((fp = fopen(argv[1], "rb")) == NULL) {
-        fprintf(stderr, "ÆÄÀÏ ¿­±â ¿À·ù\n");
+        fprintf(stderr, "íŒŒì¼ ì—´ê¸° ì˜¤ë¥˜\n");
         return 2;
     }
 
 
     printf("-----------------------------------\n");
-    printf("%10s %6s %6s\n", "ÇÐ¹ø", "ÀÌ¸§", "Á¡¼ö");
+    printf("%10s %6s %6s\n", "í•™ë²ˆ", "ì´ë¦„", "ì ìˆ˜");
     printf("-----------------------------------\n");
 
     while (fread(&rec, sizeof(rec), 1, fp) > 0)

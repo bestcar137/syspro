@@ -13,7 +13,7 @@ int main(int argc, char *argv[]) {
 
     if (!strcmp(argv[1], "stdin")) {
         fp = stdin;
-        printf("ÇÑ ±ÛÀÚ ÀÔ·Â:");
+        printf("í•œ ê¸€ìž ìž…ë ¥:");
         if (getchar() == EOF) perror("getchar");
     } else if (!strcmp(argv[1], "stdout"))
         fp = stdout;
@@ -26,18 +26,18 @@ int main(int argc, char *argv[]) {
         exit(1);
     } else if (getc(fp) == EOF) perror("getc");
 
-    printf("½ºÆ®¸² = %s, ", argv[1]);
+    printf("ìŠ¤íŠ¸ë¦¼ = %s, ", argv[1]);
 
-    if (fp->_flag & _IO_UNBUFFERED)
-        printf("¹öÆÛ ¹Ì»ç¿ë");
+    if (fp->_flags & _IO_UNBUFFERED)
+        printf("ë²„í¼ ë¯¸ì‚¬ìš©");
 
-    else if (fp->_flag & _IO_LINE_BUF)
-        printf("ÁÙ ¹öÆÛ ¹Ì»ç¿ë");
+    else if (fp->_flags & _IO_LINE_BUF)
+        printf("ì¤„ ë²„í¼ ì‚¬ìš©");
 
     else
-        printf("¿ÏÀü ¹öÆÛ »ç¿ë");
+        printf("ì™„ì „ ë²„í¼ ì‚¬ìš©");
 
 
-    printf(", ¹öÆÛ Å©±â = %d\n", fp->_IO_buf_end - fp->_IO_buf_base);
+    printf(", ë²„í¼ í¬ê¸° = %ld\n", fp->_IO_buf_end - fp->_IO_buf_base);
     exit(0);
 }

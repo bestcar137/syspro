@@ -11,13 +11,13 @@ int main(int argc, char *argv[]) {
     FILE *fp;
 
     if (argc != 2) {
-        fprintf(stderr, "»ç¿ë¹ı: %s ÆÄÀÏÀÌ¸§\n", argv[0]);
+        fprintf(stderr, "ì‚¬ìš©ë²•: %s íŒŒì¼ì´ë¦„\n", argv[0]);
         exit(1);
     }
 
     fp = fopen(argv[1], "wb");
-    printf("%-9s %-7s %-4s\n", "ÇĞ¹ø", "ÀÌ¸§", "Á¡¼ö");
-    while (scanf("%d %s %d", &rec.id, rec.name, &rec.score) == 3)
+    printf("%-9s %-7s %-4s\n", "í•™ë²ˆ", "ì´ë¦„", "ì ìˆ˜");
+    while (scanf("%d %s %hd", &rec.id, rec.name, &rec.score) == 3)
         fwrite(&rec, sizeof(rec), 1, fp);
 
     fclose(fp);

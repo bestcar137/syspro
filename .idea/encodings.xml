@@ -6,11 +6,12 @@
     <file url="file://$PROJECT_DIR$/Chapters/chap04/prob04/test.txt" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Chapters/chap04/prob05/fscan.c" charset="x-windows-949" />
     <file url="file://$PROJECT_DIR$/Chapters/chap04/prob05/test.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob06/stcreate1.c" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob06/student.h" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob06/stcreate1.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob06/student.h" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/Chapters/chap04/prob06/test.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob07/stprint.c" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob07/test.txt" charset="x-windows-949" />
-    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob08/buffer.c" charset="x-windows-949" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob07/stprint.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob07/test.txt" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob08/buffer.c" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Chapters/chap04/prob08/test.txt" charset="x-windows-949" />
   </component>
 </project>
