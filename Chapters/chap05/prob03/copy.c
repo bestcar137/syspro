@@ -4,7 +4,7 @@
 #include <fcntl.h>
 
 /* 파일 복사 프로그램 */
-main(int argc, char *argv[]) {
+int main(int argc, char *argv[]) {
     int fd1, fd2, n;
     char buf[BUFSIZ];
     if (argc != 3) {

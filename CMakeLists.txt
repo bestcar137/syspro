@@ -69,3 +69,4 @@ add_executable(chap04_prob08_buffer
 add_executable(Chapters_chap04_hw02_catEX
         Chapters/chap04/hw02/catEX.c
 )
+add_executable(Chapters_chap05_hw01_selectorLine Chapters/chap05/hw01/selectorLine.c)
