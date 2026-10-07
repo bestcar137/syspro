@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 10. 14..
+// Created by bestc on 26. 10. 07..
 //
 
 #include <sys/types.h>
@@ -14,7 +14,7 @@ int main(int argc, char *argv[]) {
     struct utimbuf time;
 
     if (argc < 3) {
-        fprintf(stderr, "How to use: cptime file1 file2\n");
+        fprintf(stderr, "사용법: cptime file1 file2\n");
         exit(1);
     }
 
@@ -26,7 +26,7 @@ int main(int argc, char *argv[]) {
     time.actime = buf.st_atime;
     time.modtime = buf.st_mtime;
 
-    if (utime(argv[2], &time)) // 접근, 수정 시간 복사
+    if (utime(argv[2], &time))  // 접근, 수정 시간 복사
         perror("utime");
     else exit(0);
 }

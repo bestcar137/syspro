@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 10. 14..
+// Created by bestc on 26. 10. 07..
 //
 
 /// 심볼릭 링크를 만드는데 성공하면 0, 실패하면 -1을 리턴한다.

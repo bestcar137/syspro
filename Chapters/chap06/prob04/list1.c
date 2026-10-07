@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 10. 14..
+// Created by bestc on 26. 10. 07..
 //
 
 #include <sys/types.h>
@@ -17,14 +17,14 @@ int main(int argc, char **argv) {
     char path[BUFSIZ + 1];
 
     if (argc == 1)
-        dir = "."; // 현재 디렉터리를 대상으로
+        dir = ".";  // 현재 디렉터리를 대상으로
     else dir = argv[1];
 
-    if ((dp = opendir(dir)) == NULL) // 디렉터리 열기
+    if ((dp = opendir(dir)) == NULL)    // 디렉터리 열기
         perror(dir);
 
-    while ((d = readdir(dp)) != NULL) // 각 디렉터리 엔트리에 대해
-        printf("%s %lu \n", d->d_name, d->d_ino); // 파일 이름, i-노드 번호 출력
+    while ((d = readdir(dp)) != NULL)   // 각 디렉터리 엔트리에 대해
+        printf("%s %lu \n", d->d_name, d->d_ino);   // 파일 이름, i-노드 번호 출력
 
     closedir(dp);
     exit(0);

@@ -1,5 +1,5 @@
 //
-// Created by bestc on 25. 10. 14..
+// Created by bestc on 26. 10. 07..
 //
 
 #include <sys/types.h>
@@ -9,7 +9,7 @@
 
 /* 파일 접근권한을 변경한다. */
 int main(int argc, char *argv[]) {
-    long strtol();
+    // long strtol();
     int newmode;
 
     newmode = (int) strtol(argv[1], (char **) NULL, 8);
