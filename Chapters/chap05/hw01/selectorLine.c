@@ -109,7 +109,7 @@ static void print_one(int idx, char saved[][MAX_COLS], int total) {
 
 int main(int argc, char *argv[]) {
     if (argc < 2) {
-        fprintf(stderr, "사용법: %s test.txt\n", argv[0]);
+        fprintf(stderr, "사용법: %s file.txt\n", argv[0]);
         return 1;
     }
 
