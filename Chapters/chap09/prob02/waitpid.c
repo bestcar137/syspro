@@ -1,13 +1,14 @@
 //
 // Created by bestc on 26. 11. 4..
 //
-
+/*@todo sleep() 함수 이해하기*/
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
 
 /**
+ * @todo sleep() 함수 이해하기
  * @brief Creates two children and waits specifically for the first child.
  *
  * @par Behavior
@@ -27,7 +28,7 @@
  * pid_t getpid(void);
  * unsigned int sleep(unsigned int seconds);
  * void exit(int status);
- * pid_t waitpid(pid_t pid, int *status, int options);
+ * pid_t waitpid(pid_t pid, int *statloc, int options);
  * @endcode
  *
  * @return Returns 0 when execution reaches the end of main() in C99 or later.

@@ -3,6 +3,7 @@
 //
 
 #include <stdio.h>
+#include <stdlib.h>
 #include <unistd.h>
 #include <sys/wait.h>
 
@@ -24,6 +25,7 @@
  * pid_t fork(void);
  * pid_t getpid(void);
  * pid_t wait(int *status);
+ * pid_t waitpid(pid_t pid, int *statloc, int options);
  * void exit(int status);
  * @endcode
  *

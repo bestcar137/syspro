@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 /**
  * @brief Runs a command supplied on the command line in a child process.
@@ -48,7 +49,7 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "%s 실행 불가\n", argv[1]);
     } else {            // 부모 프로세스
         child = wait(&status);
-        printf("[%d] 자식 프로세스 종료\n", getpid(), pid);
+        printf("[%d] 자식 프로세스 %d 종료\n", getpid(), pid);
         printf("\t종료 코드 %d \n", status >> 8);
     }
 }

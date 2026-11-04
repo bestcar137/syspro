@@ -5,6 +5,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
+
 
 /**
  * @brief Runs /bin/echo with the argument hello in a child process.
@@ -30,9 +32,12 @@
  *
  * @note Parent and child output order is not guaranteed. The variadic
  * execl() argument list must end with a null pointer.
+ * @note sleep()은 "몇초동안 기다려", wait()는 ()가 "끝날때까지 기다려".
  * @warning fork() failure is not checked.
  */
-/* 자식 프로세스를 생성하여 echo 명령어를 실행한다. */
+/* 자식 프로세스를 생성하여 echo 명령어를 실행한다.
+ * sleep()은 "몇초동안 기다려", wait()는 ()가 "끝날때까지 기다려".
+ */
 int main() {
     printf("부모 프로세스 시작 \n");
     if (fork() == 0) {

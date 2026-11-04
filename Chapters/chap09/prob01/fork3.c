@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 
 /**
  * @brief Attempts to create two children that print separate greetings.
@@ -37,7 +38,7 @@ int main() {
     int pid1, pid2;
     pid1 = fork();
     if (pid1 == 0 ) {
-        printf("[Child1] Hello, world ! pid=%d\n", getpid());
+        printf("[Child 1] Hello, world ! pid=%d\n", getpid());
         exit(0);
     }
     pid2 = fork();
