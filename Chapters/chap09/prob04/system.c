@@ -34,6 +34,12 @@
  * <unistd.h> for process APIs, <sys/wait.h> for waitpid(), and <errno.h>
  * for errno and EINTR. Prototypes shown here are documentation only.
  */
+
+# include <stddef.h>
+# include <unistd.h>
+# include <sys/wait.h>
+# include <errno.h>
+
 int mysystem(const char *cmdstring) {
     int pid, status;
 

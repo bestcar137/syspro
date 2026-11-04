@@ -62,6 +62,6 @@ int main(int argc, char *argv[]) {
         fprintf(stderr, "%s실행 불가\n", argv[1]);
     } else {
         child = wait(&status);
-        printf("[%d] 자식 프로세스 종료\n", getpid(), child);
+        printf("[%d] 자식 프로세스  %d 종료\n", getpid(), child);
     }
 }

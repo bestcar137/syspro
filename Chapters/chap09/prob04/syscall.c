@@ -4,6 +4,7 @@
 
 #include <stdio.h>
 #include <sys/wait.h>
+#include <stdlib.h>
 
 /**
  * @brief Runs three shell commands and prints extracted exit-status fields.
