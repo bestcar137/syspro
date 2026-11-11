@@ -1,0 +1,24 @@
+# 재현용 환경만 사용한 과제 1 실행 로그
+
+$ process_info -e
+PATH=/usr/bin:/bin
+HOME=/tmp/chap08-demo
+CHAP08_TEST=hello
+EMPTY=
+
+$ process_info -e CHAP08_TEST
+CHAP08_TEST = hello
+
+$ process_info -u
+실제 사용자 ID: 1000
+유효 사용자 ID: 1000
+
+$ process_info -g
+실제 그룹 ID: 1000
+유효 그룹 ID: 1000
+
+$ process_info -i
+프로세스 ID: 43313
+
+$ process_info -p
+부모 프로세스 ID: 43173

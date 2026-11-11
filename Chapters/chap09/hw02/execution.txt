@@ -1,0 +1,41 @@
++ first=39312
++ second=39314
++ sleep 0.2
++ echo START1
++ echo START2
+START1
+START2
++ sleep 10
++ sleep 10
++ jobs -l
+[1]- 39312 Running                    ( echo START1; sleep 10; echo DONE1 ) &
+[2]+ 39314 Running                    ( echo START2; sleep 10; echo DONE2 ) &
++ kill -KILL %1
++ wait 39312
++ :
++ kill -STOP %1
+job_control.sh: line 22: kill: %1: no such job
++ kill -CONT %1
+job_control.sh: line 23: kill: %1: no such job
++ wait 39314
++ echo DONE2
+DONE2
++ set +x
+
+--- 새 작업에서 STOP/CONT 확인 ---
++ resumed=40419
++ sleep 0.2
++ echo START1
+START1
++ sleep 10
++ kill -STOP %+
++ sleep 0.2
++ jobs -l
+[1]+ 40419 Stopped (signal)           ( echo START1; sleep 10; echo DONE1 )
++ kill -CONT %+
++ jobs -l
+[1]+ 40419 Running                    ( echo START1; sleep 10; echo DONE1 ) &
++ wait 40419
++ echo DONE1
+DONE1
++ set +x

@@ -1,0 +1,20 @@
++ sleep 100
++ jobs
++ sleep 100
+[1]-  Running                    sleep 100 &
+[2]+  Running                    sleep 100 &
++ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+bestcar+   39309   39306  0 11:11 pts/7    00:00:00 bash foreground_background.s
+bestcar+   39311   39309  0 11:11 pts/7    00:00:00 sleep 100
+bestcar+   39313   39309  0 11:11 pts/7    00:00:00 sleep 100
+bestcar+   39315   39309  0 11:11 pts/7    00:00:00 ps -f
++ kill %1
++ wait %1
++ :
++ ps -f
+UID          PID    PPID  C STIME TTY          TIME CMD
+bestcar+   39309   39306  0 11:11 pts/7    00:00:00 bash foreground_background.s
+bestcar+   39313   39309  0 11:11 pts/7    00:00:00 sleep 100
+bestcar+   39319   39309  0 11:11 pts/7    00:00:00 ps -f
++ set +x

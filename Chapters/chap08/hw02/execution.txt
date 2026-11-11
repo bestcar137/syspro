@@ -1,0 +1,9 @@
+launcher bash PID: 43329
+my process number : [43330]
+my parent's process number : [43329]
+    PID TTY          TIME CMD
+  43329 pts/7    00:00:00 bash
+  43330 pts/7    00:00:00 process_relatio
+  43331 pts/7    00:00:00 sh
+  43332 pts/7    00:00:00 ps
+relation program finished
